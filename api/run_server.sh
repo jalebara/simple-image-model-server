@@ -8,4 +8,4 @@ docker volume create image-model-server-data
 
 docker run --rm --ipc=host -p $PORT:$PORT --runtime=$RUNTIME \
     -v image-model-server-data:/data \
-    --network=host image-model-server
+    --network=host -d image-model-server
