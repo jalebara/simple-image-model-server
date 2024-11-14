@@ -10,9 +10,8 @@ ENV PYTHONUNBUFFERED=1 \
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         gcc git zip unzip wget curl htop libgl1 libglib2.0-0 libpython3-dev gnupg \
-        g++ libusb-1.0-0 libsm6 \
+        g++ libusb-1.0-0 libsm6 openssl tar \
     && rm -rf /var/lib/apt/lists/* 
-RUN apt upgrade --no-install-recommends -y openssl tar
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements/requirements.txt

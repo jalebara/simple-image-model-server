@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # build the server
-docker build -t image-model-server  .
+docker build --network=host -t image-model-server  .
