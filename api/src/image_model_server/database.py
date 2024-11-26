@@ -17,6 +17,7 @@ class ImageModel(Base):
     image_name = Column(String, index=True)
     image_path = Column(String, index=True)
     detection_json = Column(Text)
+    modified_image_path = Column(String)
 
 
 # Create the table in the database
